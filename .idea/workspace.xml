@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/encoway/backend/field/Coin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/encoway/backend/field/Field.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/encoway/backend/field/color/Colors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encoway/utils/Vector2d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/backend/grid/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/backend/grid/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Packet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/PacketType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/PacketType.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +45,8 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">

@@ -1,7 +1,7 @@
 package com.encoway.networking;
 
 public enum PacketType {
-    connectToOpponent,
-    acceptConnection,
-    placeChip
+    CONNECT_TO_OPPONENT,
+    ACCEPT_INVITATION,
+    PLACE_CHIP
 }
