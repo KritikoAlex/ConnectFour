@@ -15,15 +15,12 @@ public class Field {
         return isFull;
     }
 
-    public void setFull(boolean full) {
-        isFull = full;
-    }
-
     public Coin getCoin() {
         return coin;
     }
 
     public void setCoin(Coin coin) {
         this.coin = coin;
+        isFull = !coin.equals(Coin.NOTHING);
     }
 }

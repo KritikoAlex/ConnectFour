@@ -5,7 +5,8 @@ import com.encoway.backend.field.color.Colors;
 public enum Coin {
 
     YELLOW(Colors.ANSI_YELLOW),
-    RED(Colors.ANSI_RED);
+    RED(Colors.ANSI_RED),
+    NOTHING(Colors.ANSI_RESET);
 
     private String color;
 
