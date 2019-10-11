@@ -1,7 +1,5 @@
 package com.encoway.networking;
 
-import com.encoway.utils.Vector2d;
-
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
@@ -15,15 +13,24 @@ public class Networking {
     }
 
     public void instruct() throws IOException, InterruptedException {
+        String[] ips = new String[2];
+        ips[0] = this.getLocalIp();
+        ips[1] = this.getPublicIp();
         System.out.println("ip addresses:");
-        System.out.println("local: " + this.getLocalIp());
-        System.out.println("public: " + this.getPublicIp());
+        System.out.println("local: " + ips[0]);
+        System.out.println("public: " + ips[1]);
         System.out.print("\ndo you want to connect to your opponent?(y/n): ");
         if (new Scanner(System.in).nextLine().charAt(0) == 'y') {
+            try {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            }catch (IOException | InterruptedException e){ }
             System.out.print("enter ip: ");
-            this.send(new Scanner(System.in).nextLine(), 80, new Packet(PacketType.CONNECT_TO_OPPONENT, null));
+            this.send(new Scanner(System.in).nextLine(), 80, new Packet(PacketType.CONNECT_TO_OPPONENT, 0));
             System.out.println("waiting for response...");
         } else {
+            try {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            }catch (IOException | InterruptedException e){ }
             System.out.println("waiting for incoming connections...");
             while (!this.listener.gotPacket)
                 Thread.sleep(250);
