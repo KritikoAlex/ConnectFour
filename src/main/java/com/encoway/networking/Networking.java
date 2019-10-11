@@ -39,6 +39,7 @@ public class Networking {
             while (!this.isValidPacket()) {
                 Thread.sleep(250);
             }
+            Listener.gotPacket = false;
             this.send(Listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
             Thread.sleep(250);

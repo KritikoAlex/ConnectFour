@@ -22,9 +22,8 @@ public class ConnectFourMain {
         networking.instruct();
 
         grid.print();
-        System.out.println("Here!");
         while (!won) {
-            System.out.println("NOW!");
+            Thread.sleep(10);
             while(Listener.gotPacket) {
                 //Both!
                 System.out.println("Test!");
@@ -39,6 +38,7 @@ public class ConnectFourMain {
                     grid.print();
                 //Receipt Side
                 }else if(Listener.packet.getPacketType() == PacketType.PLACE_CHIP){
+                    switchPlayer();
                     Packet packet = Listener.packet;
                     int row = packet.getData();
                     grid.insertCoin(row, 0, currentPlayer);
@@ -68,5 +68,8 @@ public class ConnectFourMain {
 
         grid.insertCoin(row, 0, currentPlayer);
         return row;
+    }
+    private static void switchPlayer(){
+        currentPlayer = (currentPlayer==Coin.YELLOW ? Coin.RED : Coin.YELLOW);
     }
 }
