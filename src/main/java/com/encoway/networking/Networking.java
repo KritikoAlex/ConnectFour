@@ -43,8 +43,9 @@ public class Networking {
 
             this.send(Listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
+            Thread.sleep(250);
             this.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
-            Listener.gotPacket = false;
+
         }
     }
 

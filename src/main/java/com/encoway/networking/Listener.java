@@ -8,6 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Listener extends Thread {
+
     public static String lastOpponentIp;
     public static Packet packet;
     public static boolean gotPacket;
@@ -34,7 +35,7 @@ public class Listener extends Thread {
                 e.printStackTrace();
                 System.exit(0);
             }
-            this.lastOpponentIp = (((InetSocketAddress)socket.getRemoteSocketAddress()).getAddress()).toString().replace("/","");
+            this.lastOpponentIp = (((InetSocketAddress) socket.getRemoteSocketAddress()).getAddress()).toString().replace("/", "");
 
             try {
                 inputStream = socket.getInputStream();
@@ -56,6 +57,7 @@ public class Listener extends Thread {
             }
 
             //packet weitergeben
+            System.out.println("Packet: " + packet.getPacketType());
             gotPacket = true;
         }
     }

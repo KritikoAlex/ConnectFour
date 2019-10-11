@@ -25,12 +25,18 @@ public class ConnectFourMain {
         grid.print();
         while (!won) {
             while(Listener.gotPacket) {
+                //Both!
+                System.out.println("Test!");
+                //Sender Side
                 if(Listener.packet.getPacketType() == PacketType.TAKE_CONTROL) {
+                    System.out.println("Hey!");
                     int row = insertCoinViaControl();
                     Listener.gotPacket = false;
                     networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.PLACE_CHIP, row));
+                    Thread.sleep(250);
                     networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
                     grid.print();
+                //Receipt Side
                 }else if(Listener.packet.getPacketType() == PacketType.PLACE_CHIP){
                     Packet packet = Listener.packet;
                     int row = packet.getData();
