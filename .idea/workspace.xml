@@ -4,9 +4,12 @@
     <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/backend/grid/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/backend/grid/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/PacketType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/PacketType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1S3SWTGm3gtRByga4IC11RIS4hU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -33,6 +37,26 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ConnectFourMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.encoway.ConnectFourMain" />
+      <module name="ConnectFour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.encoway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ConnectFourMain" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -107,6 +131,13 @@
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
       <updated>1570784842426</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="" />
+      <created>1570790818979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570790818979</updated>
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />

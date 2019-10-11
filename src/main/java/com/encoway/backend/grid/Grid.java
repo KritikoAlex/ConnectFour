@@ -24,34 +24,31 @@ public class Grid {
         }
     }
 
-    public void insertCoin(int height, int row, Coin coin) {
+    public void insertCoin(int height, int row, Coin controlCoin) {
         ConnectFourMain.grid.print();
         Field field = null;
         //Try getting the field at first since it might not exist
         try {
             field = grid[row][height];
         } catch (ArrayIndexOutOfBoundsException e) {
-            if(isFourInARow(row - 1, height, coin)){
-                ConnectFourMain.winnerCoin = coin;
-            }
-            ConnectFourMain.won = isFourInARow(row - 1, height, coin);
             return;
         }
+        ConnectFourMain.won = isFourInARow(row - 1, height, controlCoin);
         //If the field is not full then add in a coin
         if (!field.isFull()) {
-            field.setCoin(coin);
+            field.setCoin(controlCoin);
             try {
                 if (row > 0) {
                     grid[row - 1][height].setCoin(Coin.NOTHING);
-                    insertCoin(height, row + 1, coin);
+                    insertCoin(height, row + 1, controlCoin);
                 } else {
-                    insertCoin(height, row + 1, coin);
+                    insertCoin(height, row + 1, controlCoin);
                 }
             } catch (IndexOutOfBoundsException e) {
-                insertCoin(height, row + 1, coin);
+                insertCoin(height, row + 1, controlCoin);
             }
         } else if (grid[row][height] != null) {
-            ConnectFourMain.won = isFourInARow(row - 1, height, coin);
+            ConnectFourMain.won = isFourInARow(row - 1, height, controlCoin);
         }
     }
 
@@ -97,7 +94,7 @@ public class Grid {
         }
     }
 
-    private int lengthOfLineStartingAt(int x, int y, int xStep, int yStep, int length, Coin coin) {
+    private int lengthOfLineStartingAt(int x, int y, int xStep, int yStep, int length, Coin controlCoin) {
         if (length >= 4) {
             return length;
         }
@@ -109,10 +106,10 @@ public class Grid {
             return length;
         }
 
-        Coin coin1 = field.getCoin();
-        if (coin1.equals(coin)) {
+        Coin fieldCoin = field.getCoin();
+        if (fieldCoin.equals(controlCoin)) {
             length++;
-            i = lengthOfLineStartingAt(x + xStep, y + yStep, xStep, yStep, length, coin);
+            i = lengthOfLineStartingAt(x + xStep, y + yStep, xStep, yStep, length, controlCoin);
         } else {
             return length;
         }
