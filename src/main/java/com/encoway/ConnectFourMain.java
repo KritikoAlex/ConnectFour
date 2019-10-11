@@ -48,10 +48,14 @@ public class ConnectFourMain {
                     grid.insertCoin(row, 0, currentPlayer);
                     grid.print();
                     switchPlayer();
+                } else if (Listener.packet.getPacketType() == PacketType.OPPONENT_WON) {
+                    switchPlayer();
+                    System.out.println("Player " + currentPlayer.getColor() + Listener.packet.getData() + Colors.ANSI_RESET + " won!");
                 }
             }
         }
         System.out.println("Player " + winnerCoin.getColor() + id + Colors.ANSI_RESET + " won!");
+        networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.OPPONENT_WON, id));
     }
 
     private static int insertCoinViaControl() {
