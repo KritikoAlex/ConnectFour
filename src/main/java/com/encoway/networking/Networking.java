@@ -24,9 +24,6 @@ public class Networking {
         System.out.println("public: " + ips[1]);
         System.out.print("\nDo you want to connect to your opponent?(y/n): ");
         if (new Scanner(System.in).nextLine().charAt(0) == 'y') {
-            try {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            }catch (IOException | InterruptedException e){ }
             System.out.print("enter ip: ");
             this.send(new Scanner(System.in).nextLine(), 80, new Packet(PacketType.CONNECT_TO_OPPONENT, 0));
             System.out.println("waiting for response...");
@@ -36,12 +33,11 @@ public class Networking {
 
             System.out.println("connected");
         } else {
-            try {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            }catch (IOException | InterruptedException e){ }
             System.out.println("waiting for incoming connections...");
-            while (!this.listener.gotPacket)
+            while (!this.isValidPacket()) {
                 Thread.sleep(250);
+            }
+
             this.send(listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
         }
@@ -61,5 +57,12 @@ public class Networking {
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
         objectOutputStream.writeObject(data);
         socket.close();
+    }
+
+    public boolean isValidPacket() {
+        if (!this.listener.gotPacket)
+            return false;
+
+        return this.listener.packet.packetType != PacketType.CONNECT_TO_OPPONENT;
     }
 }
