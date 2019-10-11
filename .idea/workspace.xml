@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

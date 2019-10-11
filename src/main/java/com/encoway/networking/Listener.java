@@ -8,17 +8,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Listener extends Thread {
-    public String lastOpponentIp;
-    public Packet packet;
-    public boolean gotPacket;
+    public static String lastOpponentIp;
+    public static Packet packet;
+    public static boolean gotPacket;
 
     public void run() {
         ServerSocket serverSocket = null;
         InputStream inputStream = null;
-        this.packet = null;
+        packet = null;
         Socket socket = null;
         ObjectInputStream objectInputStream = null;
-        this.gotPacket = false;
+        gotPacket = false;
 
         try {
             serverSocket = new ServerSocket(80);

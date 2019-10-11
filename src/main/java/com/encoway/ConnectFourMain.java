@@ -2,11 +2,17 @@ package com.encoway;
 
 import com.encoway.backend.field.Coin;
 import com.encoway.backend.grid.Grid;
+import com.encoway.networking.Listener;
 import com.encoway.networking.Networking;
+import com.encoway.networking.Packet;
+import com.encoway.networking.PacketType;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
+
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 public class ConnectFourMain {
 
@@ -19,8 +25,10 @@ public class ConnectFourMain {
         networking.instruct();
 
         grid.print();
-        while (!won) {
+        while (!won && Listener.gotPacket && Listener.packet.getPacketType() == PacketType.TAKE_CONTROL) {
             System.out.println("Gib eine Spalte ein: ");
+            System.out.println("Packet Type: " + Listener.packet.getPacketType().toString());
+            System.out.println("Received Info: " + Listener.gotPacket);
             int row = 0;
             boolean valid = false;
 
@@ -35,15 +43,11 @@ public class ConnectFourMain {
             } while (!valid);
 
             grid.insertCoin(row, 0, currentPlayer);
-            switchPlayer();
+            Listener.gotPacket = false;
+            networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.PLACE_CHIP, row));
+            networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
             grid.print();
         }
         System.out.println("You won!");
     }
-
-    private static void switchPlayer() {
-        currentPlayer = (currentPlayer.equals(Coin.YELLOW) ? Coin.RED : Coin.YELLOW);
-    }
-
-
 }

@@ -28,10 +28,10 @@ public class Networking {
             this.send(new Scanner(System.in).nextLine(), 80, new Packet(PacketType.CONNECT_TO_OPPONENT, 0));
             System.out.println("waiting for response...");
 
-            while (!this.listener.gotPacket) {
+            while (!Listener.gotPacket) {
                 Thread.sleep(250);
             }
-            this.listener.gotPacket = false;
+            Listener.gotPacket = false;
 
             System.out.println("connected");
         } else {
@@ -39,18 +39,25 @@ public class Networking {
             while (!this.isValidPacket()) {
                 Thread.sleep(250);
             }
-            this.listener.gotPacket = false;
+            Listener.gotPacket = false;
 
-            this.send(listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
+            this.send(Listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
+            this.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
+            Listener.gotPacket = false;
         }
     }
 
-    public String getPublicIp() throws IOException {
-        return new BufferedReader(new InputStreamReader(new URL("https://checkip.amazonaws.com").openStream())).readLine();
+    private String getPublicIp() {
+        try {
+            return new BufferedReader(new InputStreamReader(new URL("https://checkip.amazonaws.com").openStream())).readLine();
+        }catch (IOException e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public String getLocalIp() throws UnknownHostException {
+    private String getLocalIp() throws UnknownHostException {
         return InetAddress.getLocalHost().getHostAddress();
     }
 
@@ -62,10 +69,10 @@ public class Networking {
         socket.close();
     }
 
-    public boolean isValidPacket() {
-        if (!this.listener.gotPacket)
+    private boolean isValidPacket() {
+        if (!Listener.gotPacket)
             return false;
 
-        return this.listener.packet.packetType == PacketType.CONNECT_TO_OPPONENT;
+        return Listener.packet.packetType == PacketType.CONNECT_TO_OPPONENT;
     }
 }
