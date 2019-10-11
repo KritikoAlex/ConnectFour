@@ -54,7 +54,6 @@ public class Grid {
                 insertCoin(height, row + 1, controlCoin);
             }
         } else if (grid[row][height] != null) {
-            System.out.println("Test here now!");
             if(isFourInARow(row - 1, height, controlCoin)){
                 try {
                     ConnectFourMain.networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.WIN, height));

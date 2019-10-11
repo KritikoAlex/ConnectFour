@@ -29,10 +29,8 @@ public class ConnectFourMain {
             Thread.sleep(10);
             while (Listener.gotPacket) {
                 //Both!
-                System.out.println("Test!");
                 //Sender Side
                 if (Listener.packet.getPacketType() == PacketType.TAKE_CONTROL) {
-                    System.out.println("Hey!");
                     Thread.sleep(10);
                     Listener.gotPacket = false;
                     int row = insertCoinViaControl();
@@ -42,8 +40,6 @@ public class ConnectFourMain {
                         networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
                         grid.print();
                         switchPlayer();
-                    } else {
-                        System.out.println("OMG ALEX IST EIN GENIE!");
                     }
                     //Receipt Side
                 } else if (Listener.packet.getPacketType() == PacketType.PLACE_CHIP) {
@@ -53,7 +49,6 @@ public class ConnectFourMain {
                     grid.print();
                     switchPlayer();
                 } else if (Listener.packet.getPacketType() == PacketType.WIN) {
-                    System.out.println("Last Column: " + Listener.packet.getData());
                     grid.insertCoin(Listener.packet.getData(), 0, currentPlayer);
                     grid.print();
                     System.out.println("The player " + currentPlayer.getColor() + (id == 1 ? "0" : "1") + Colors.ANSI_RESET + " has won!");
@@ -67,8 +62,6 @@ public class ConnectFourMain {
 
     private static int insertCoinViaControl() {
         System.out.println("Gib eine Spalte ein: ");
-        System.out.println("Packet Type: " + Listener.packet.getPacketType().toString());
-        System.out.println("Received Info: " + Listener.gotPacket);
         int row = 0;
         boolean valid = false;
 
