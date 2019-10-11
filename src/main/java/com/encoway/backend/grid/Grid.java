@@ -10,6 +10,8 @@ import com.encoway.networking.PacketType;
 
 import java.io.IOException;
 
+import sun.nio.ch.Net;
+
 public class Grid {
 
     private Field[][] grid = new Field[6][7];
@@ -24,15 +26,18 @@ public class Grid {
         }
     }
 
-    public void insertCoin(int height, int row, Coin controlCoin) {
+    public void insertCoin(int height, int row, Coin controlCoin){
         ConnectFourMain.grid.print();
         Field field = null;
         //Try getting the field at first since it might not exist
         try {
             field = grid[row][height];
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Test here now!2 ");
-            ConnectFourMain.won = isFourInARow(row - 1, height, controlCoin);
+            if(isFourInARow(row - 1, height, controlCoin)){
+                try {
+                    ConnectFourMain.networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.WIN, ConnectFourMain.id));
+                }catch (IOException e1){}
+            }
             return;
         }
         //If the field is not full then add in a coin
@@ -50,6 +55,11 @@ public class Grid {
             }
         } else if (grid[row][height] != null) {
             System.out.println("Test here now!");
+            if(isFourInARow(row - 1, height, controlCoin)){
+                try {
+                    ConnectFourMain.networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.WIN, ConnectFourMain.id));
+                }catch (IOException e){}
+            }
             ConnectFourMain.won = isFourInARow(row - 1, height, controlCoin);
         }
     }

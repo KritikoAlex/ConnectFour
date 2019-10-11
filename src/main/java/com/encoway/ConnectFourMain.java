@@ -24,7 +24,6 @@ public class ConnectFourMain {
     public static void main(String[] args) throws IOException, InterruptedException {
         networking = new Networking();
         networking.instruct();
-
         grid.print();
         while (!won) {
             Thread.sleep(10);
@@ -53,10 +52,11 @@ public class ConnectFourMain {
                     grid.insertCoin(row, 0, currentPlayer);
                     grid.print();
                     switchPlayer();
+                } else if (Listener.packet.getPacketType() == PacketType.WIN) {
+                    System.exit(0);
                 }
             }
         }
-        switchPlayer();
         System.out.println("The player " + currentPlayer.getColor() + id + Colors.ANSI_RESET + " has won!");
     }
 
