@@ -72,31 +72,31 @@ public class Grid {
                 row.append("        ╔ ");
 
             }else if(i == 5){
-
+                row.append("        ╚ ");
             }else {
                 row.append("        ╟ ");
             }
             for (int d = 0; d < horizontalRow.length; d++) {
                 Field field = horizontalRow[d];
-                if(i == 0){
-                    if(d == 6){
+                if (i == 0) {
+                    if (d == 6) {
                         row.append(field.print() + " ╗ ");
-                    }else {
-                        row.append(field.print() + " ┯ ");
+                    } else {
+                        row.append(field.print() + " ╤ ");
                     }
-                }else if(i == 5) {
-                    if(d == 0){
-                        row.append(field.print() + " ╚ ");
-                    }else if(d == 6){
+                } else if (i == 5) {
+                    if (d == 6) {
                         row.append(field.print() + " ╝ ");
-                    }else {
-                        row.append(field.print() + " ╣ ");
+                    }else{
+                        row.append(field.print() + " ╧ ");
                     }
-                }else {
+                } else if (i > 0 && i < 5 && d == 6) {
+                    row.append(field.print() + " ╣ ");
+                } else {
                     row.append(field.print() + " ┼ ");
                 }
             }
-            System.out.println(row);
+                System.out.println(row);
         }
     }
 
