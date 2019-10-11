@@ -31,9 +31,10 @@ public class Grid {
         try {
             field = grid[row][height];
         } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Test here now!2 ");
+            ConnectFourMain.won = isFourInARow(row - 1, height, controlCoin);
             return;
         }
-        ConnectFourMain.won = isFourInARow(row - 1, height, controlCoin);
         //If the field is not full then add in a coin
         if (!field.isFull()) {
             field.setCoin(controlCoin);
@@ -48,6 +49,7 @@ public class Grid {
                 insertCoin(height, row + 1, controlCoin);
             }
         } else if (grid[row][height] != null) {
+            System.out.println("Test here now!");
             ConnectFourMain.won = isFourInARow(row - 1, height, controlCoin);
         }
     }
