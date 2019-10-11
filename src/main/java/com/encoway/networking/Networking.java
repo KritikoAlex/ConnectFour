@@ -63,6 +63,6 @@ public class Networking {
         if (!this.listener.gotPacket)
             return false;
 
-        return this.listener.packet.packetType != PacketType.CONNECT_TO_OPPONENT;
+        return this.listener.packet.packetType == PacketType.CONNECT_TO_OPPONENT;
     }
 }
