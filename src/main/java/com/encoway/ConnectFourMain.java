@@ -36,13 +36,13 @@ public class ConnectFourMain {
                     Thread.sleep(10);
                     Listener.gotPacket = false;
                     int row = insertCoinViaControl();
-                    if(!won) {
+                    if (!won) {
                         networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.PLACE_CHIP, row));
                         Thread.sleep(250);
                         networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
                         grid.print();
                         switchPlayer();
-                    }else{
+                    } else {
                         System.out.println("OMG ALEX IST EIN GENIE!");
                     }
                     //Receipt Side
@@ -53,10 +53,10 @@ public class ConnectFourMain {
                     grid.print();
                     switchPlayer();
                 } else if (Listener.packet.getPacketType() == PacketType.WIN) {
-                    System.out.println(Listener.packet.getData());
+                    System.out.println("Last Column: " + Listener.packet.getData());
                     grid.insertCoin(Listener.packet.getData(), 0, currentPlayer);
                     grid.print();
-                    System.out.println("The player " + currentPlayer.getColor() + (id==1 ? "0" : "1") + Colors.ANSI_RESET + " has won!");
+                    System.out.println("The player " + currentPlayer.getColor() + (id == 1 ? "0" : "1") + Colors.ANSI_RESET + " has won!");
                     System.exit(0);
                 }
             }
