@@ -45,7 +45,4 @@ public class ConnectFourMain {
     private static void switchPlayer(){
         currentPlayer = (currentPlayer.equals(Coin.YELLOW) ? Coin.RED : Coin.YELLOW);
     }
-
-
-
 }

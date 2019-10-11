@@ -16,7 +16,6 @@ public class Grid {
                 Field field = new Field();
                 field.setCoin(Coin.NOTHING);
                 grid[i][d] = field;
-                System.out.println("Feld " + i + " " + d + " eingesetzt!");
             }
         }
     }
@@ -27,20 +26,15 @@ public class Grid {
         //Try getting the field at first since it might not exist
         try {
             field = grid[row][height];
-            System.out.println("The field " + row + " " + height + " exists!");
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Wow! Row: " + row + " Height: " + height);
-            System.out.println(isFourInARow(row - 1, height, coin));
             ConnectFourMain.won = isFourInARow(row - 1, height, coin);
             return;
         }
         //If the field is not full then add in a coin
         if (!field.isFull()) {
-            System.out.println("Added to field " + row + " " + height);
             field.setCoin(coin);
             try {
                 if (row > 0) {
-                    System.out.println("Made it disappear...");
                     grid[row - 1][height].setCoin(Coin.NOTHING);
                     insertCoin(height, row + 1, coin);
                 } else {
@@ -50,11 +44,7 @@ public class Grid {
                 insertCoin(height, row + 1, coin);
             }
         } else if (grid[row][height] != null) {
-            System.out.println("Wow!");
-            System.out.println(isFourInARow(row - 1, height, coin));
             ConnectFourMain.won = isFourInARow(row - 1, height, coin);
-        } else {
-            System.out.println("HM");
         }
     }
 
@@ -108,21 +98,17 @@ public class Grid {
         Field field = null;
         try {
             field = grid[x][y];
-            System.out.println("Okay...");
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Zuende!");
             return length;
         }
 
         Coin coin1 = field.getCoin();
         if (coin1.equals(coin)) {
-            System.out.println("UFFFFF");
             length++;
             i = lengthOfLineStartingAt(x + xStep, y + yStep, xStep, yStep, length, coin);
         } else {
             return length;
         }
-        System.out.println("Length: " + i);
         return i;
     }
 
@@ -130,7 +116,6 @@ public class Grid {
         int first = lengthOfLineStartingAt(x, y, xStep, yStep, 0, coin);
         int second = lengthOfLineStartingAt(x, y, -xStep, -yStep, 0, coin);
         int result = first + second - 1;
-        System.out.println("WOWWOWW: " + first + " " + second + " " + result);
         return result;
     }
 
