@@ -22,7 +22,7 @@ public class Listener extends Thread {
         gotPacket = false;
 
         try {
-            serverSocket = new ServerSocket(3389);
+            serverSocket = new ServerSocket(8080);
         } catch (IOException e) {
             e.printStackTrace();
         }

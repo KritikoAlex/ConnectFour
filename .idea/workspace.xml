@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" afterDir="false" />
@@ -139,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570790818979</updated>
-      <workItem from="1570799331343" duration="3329000" />
+      <workItem from="1570799331343" duration="4004000" />
     </task>
     <task id="LOCAL-00011" summary="F V10">
       <created>1570800215869</created>
@@ -162,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570802330921</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="F port fix mega F">
+      <created>1570802682615</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802682615</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

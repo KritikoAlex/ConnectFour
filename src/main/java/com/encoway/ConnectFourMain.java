@@ -35,9 +35,9 @@ public class ConnectFourMain {
                     Listener.gotPacket = false;
                     int row = insertCoinViaControl();
                     if (!won) {
-                        networking.send(Listener.lastOpponentIp, 3389, new Packet(PacketType.PLACE_CHIP, row));
+                        networking.send(Listener.lastOpponentIp, 8080, new Packet(PacketType.PLACE_CHIP, row));
                         Thread.sleep(250);
-                        networking.send(Listener.lastOpponentIp, 3389, new Packet(PacketType.TAKE_CONTROL, 0));
+                        networking.send(Listener.lastOpponentIp, 8080, new Packet(PacketType.TAKE_CONTROL, 0));
                         grid.print();
                         switchPlayer();
                     }
@@ -57,6 +57,7 @@ public class ConnectFourMain {
             }
         }
         System.out.println("The player " + currentPlayer.getColor() + id + Colors.ANSI_RESET + " has won!");
+        Thread.sleep(15000);
         System.exit(0);
     }
 

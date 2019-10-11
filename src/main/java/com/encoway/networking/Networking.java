@@ -28,7 +28,7 @@ public class Networking {
         System.out.print("\nDo you want to connect to your opponent?(y/n): ");
         if (new Scanner(System.in).nextLine().charAt(0) == 'y') {
             System.out.print("enter ip: ");
-            this.send(new Scanner(System.in).nextLine(), 3389, new Packet(PacketType.CONNECT_TO_OPPONENT, 0));
+            this.send(new Scanner(System.in).nextLine(), 8080, new Packet(PacketType.CONNECT_TO_OPPONENT, 0));
             System.out.println("waiting for response...");
 
             while (!Listener.gotPacket) {
@@ -43,11 +43,11 @@ public class Networking {
                 Thread.sleep(250);
             }
             Listener.gotPacket = false;
-            this.send(Listener.lastOpponentIp, 3389, new Packet(PacketType.ACCEPT_INVITATION, 0));
+            this.send(Listener.lastOpponentIp, 8080, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
             ConnectFourMain.id = 1;
             Thread.sleep(250);
-            this.send(Listener.lastOpponentIp, 3389, new Packet(PacketType.TAKE_CONTROL, 0));
+            this.send(Listener.lastOpponentIp, 8080, new Packet(PacketType.TAKE_CONTROL, 0));
 
         }
     }
