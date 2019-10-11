@@ -16,19 +16,21 @@ public class ConnectFourMain {
     public static Grid grid = new Grid();
     public static boolean won = false;
     private static Coin currentPlayer = Coin.YELLOW;
+    public static int id = 0;
+    public static Networking networking;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Networking networking = new Networking();
+        networking = new Networking();
         networking.instruct();
 
         grid.print();
         while (!won) {
             Thread.sleep(10);
-            while(Listener.gotPacket) {
+            while (Listener.gotPacket) {
                 //Both!
                 System.out.println("Test!");
                 //Sender Side
-                if(Listener.packet.getPacketType() == PacketType.TAKE_CONTROL) {
+                if (Listener.packet.getPacketType() == PacketType.TAKE_CONTROL) {
                     System.out.println("Hey!");
                     int row = insertCoinViaControl();
                     Listener.gotPacket = false;
@@ -37,17 +39,18 @@ public class ConnectFourMain {
                     networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
                     grid.print();
                     switchPlayer();
-                //Receipt Side
-                }else if(Listener.packet.getPacketType() == PacketType.PLACE_CHIP){
+                    //Receipt Side
+                } else if (Listener.packet.getPacketType() == PacketType.PLACE_CHIP) {
                     Packet packet = Listener.packet;
                     int row = packet.getData();
                     grid.insertCoin(row, 0, currentPlayer);
                     grid.print();
                     switchPlayer();
+                } else if (Listener.packet.getPacketType() == PacketType.OPPONENT_WON) {
+                    System.out.println("You won!");
                 }
             }
         }
-        System.out.println("You won!");
     }
 
     private static int insertCoinViaControl(){
@@ -68,6 +71,7 @@ public class ConnectFourMain {
         } while (!valid);
 
         grid.insertCoin(row, 0, currentPlayer);
+        switchPlayer();
         return row;
     }
     private static void switchPlayer(){

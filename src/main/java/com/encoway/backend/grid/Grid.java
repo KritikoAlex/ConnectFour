@@ -3,6 +3,10 @@ package com.encoway.backend.grid;
 import com.encoway.ConnectFourMain;
 import com.encoway.backend.field.Coin;
 import com.encoway.backend.field.Field;
+import com.encoway.networking.Listener;
+import com.encoway.networking.Networking;
+import com.encoway.networking.Packet;
+import com.encoway.networking.PacketType;
 
 import java.io.IOException;
 
@@ -27,6 +31,16 @@ public class Grid {
         try {
             field = grid[row][height];
         } catch (ArrayIndexOutOfBoundsException e) {
+            if (isFourInARow(row - 1, height, coin)) {
+                try {
+                    ConnectFourMain.networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.OPPONENT_WON, 0));
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException ex) { }
             ConnectFourMain.won = isFourInARow(row - 1, height, coin);
             return;
         }
