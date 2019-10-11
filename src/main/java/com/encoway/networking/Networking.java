@@ -13,13 +13,16 @@ public class Networking {
     }
 
     public void instruct() throws IOException, InterruptedException {
+        try {
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        }catch (IOException | InterruptedException e){ }
         String[] ips = new String[2];
         ips[0] = this.getLocalIp();
         ips[1] = this.getPublicIp();
         System.out.println("ip addresses:");
         System.out.println("local: " + ips[0]);
         System.out.println("public: " + ips[1]);
-        System.out.print("\ndo you want to connect to your opponent?(y/n): ");
+        System.out.print("\nDo you want to connect to your opponent?(y/n): ");
         if (new Scanner(System.in).nextLine().charAt(0) == 'y') {
             try {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -27,6 +30,11 @@ public class Networking {
             System.out.print("enter ip: ");
             this.send(new Scanner(System.in).nextLine(), 80, new Packet(PacketType.CONNECT_TO_OPPONENT, 0));
             System.out.println("waiting for response...");
+
+            while (!this.listener.gotPacket)
+                Thread.sleep(250);
+
+            System.out.println("connected");
         } else {
             try {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -34,6 +42,7 @@ public class Networking {
             System.out.println("waiting for incoming connections...");
             while (!this.listener.gotPacket)
                 Thread.sleep(250);
+            this.send(listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
         }
     }
