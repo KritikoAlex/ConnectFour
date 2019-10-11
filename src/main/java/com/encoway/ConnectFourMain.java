@@ -54,7 +54,9 @@ public class ConnectFourMain {
                     switchPlayer();
                 } else if (Listener.packet.getPacketType() == PacketType.WIN) {
                     switchPlayer();
-                    System.out.println("The player " + currentPlayer.getColor() + Listener.packet.getData() + Colors.ANSI_RESET + " has won!");
+                    grid.insertCoin(Listener.packet.getData(), 0, currentPlayer);
+                    grid.print();
+                    System.out.println("The player " + currentPlayer.getColor() + (id==1 ? "0" : "1") + Colors.ANSI_RESET + " has won!");
                     System.exit(0);
                 }
             }

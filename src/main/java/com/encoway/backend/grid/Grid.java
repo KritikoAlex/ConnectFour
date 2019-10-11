@@ -35,7 +35,7 @@ public class Grid {
         } catch (ArrayIndexOutOfBoundsException e) {
             if(isFourInARow(row - 1, height, controlCoin)){
                 try {
-                    ConnectFourMain.networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.WIN, ConnectFourMain.id));
+                    ConnectFourMain.networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.WIN, height));
                 }catch (IOException e1){}
             }
             return;
