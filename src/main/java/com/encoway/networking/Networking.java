@@ -28,8 +28,10 @@ public class Networking {
             this.send(new Scanner(System.in).nextLine(), 80, new Packet(PacketType.CONNECT_TO_OPPONENT, 0));
             System.out.println("waiting for response...");
 
-            while (!this.listener.gotPacket)
+            while (!this.listener.gotPacket) {
                 Thread.sleep(250);
+            }
+            this.listener.gotPacket = false;
 
             System.out.println("connected");
         } else {
@@ -37,6 +39,7 @@ public class Networking {
             while (!this.isValidPacket()) {
                 Thread.sleep(250);
             }
+            this.listener.gotPacket = false;
 
             this.send(listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
