@@ -1,17 +1,17 @@
 package com.encoway;
 
-import com.encoway.backend.field.Coin;
 import com.encoway.backend.grid.Grid;
+import com.encoway.networking.Networking;
+
+import java.io.IOException;
 
 public class ConnectFourMain {
 
     public static Grid grid = new Grid();
 
-    public static void main(String[] args) {
-        grid.insertCoin(1, 0, Coin.RED);
-        grid.insertCoin(1, 0, Coin.YELLOW);
-        grid.insertCoin(1, 0, Coin.YELLOW);
-        grid.insertCoin(0, 0, Coin.RED);
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Networking networking = new Networking();
+        networking.instruct();
         grid.print();
     }
 
