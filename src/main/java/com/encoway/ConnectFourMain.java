@@ -15,12 +15,11 @@ public class ConnectFourMain {
     private static Coin currentPlayer = Coin.YELLOW;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        /*Networking networking = new Networking();
+        Networking networking = new Networking();
         networking.instruct();
+
         grid.print();
-        */
-        grid.print();
-        while(!won) {
+        while (!won) {
             System.out.println("Gib eine Spalte ein: ");
             int row = 0;
             boolean valid = false;
@@ -33,7 +32,7 @@ public class ConnectFourMain {
                     System.out.println("Nutze bitte nur Nummern!");
                     valid = false;
                 }
-            }while (!valid);
+            } while (!valid);
 
             grid.insertCoin(row, 0, currentPlayer);
             switchPlayer();
@@ -42,10 +41,9 @@ public class ConnectFourMain {
         System.out.println("You won!");
     }
 
-    private static void switchPlayer(){
+    private static void switchPlayer() {
         currentPlayer = (currentPlayer.equals(Coin.YELLOW) ? Coin.RED : Coin.YELLOW);
     }
-
 
 
 }
