@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/ConnectFour.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/backend/grid/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/backend/grid/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/networking/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/networking/Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,9 +131,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570790818979</updated>
-      <workItem from="1570799331343" duration="640000" />
+      <workItem from="1570799331343" duration="977000" />
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="F V10">
+      <created>1570800215869</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570800215870</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +167,7 @@
     <MESSAGE value="F V7" />
     <MESSAGE value="F V8" />
     <MESSAGE value="F V9" />
-    <option name="LAST_COMMIT_MESSAGE" value="F V9" />
+    <MESSAGE value="F V10" />
+    <option name="LAST_COMMIT_MESSAGE" value="F V10" />
   </component>
 </project>
