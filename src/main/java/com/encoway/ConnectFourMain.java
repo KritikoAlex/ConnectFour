@@ -9,7 +9,6 @@ import com.encoway.networking.PacketType;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class ConnectFourMain {
@@ -23,7 +22,9 @@ public class ConnectFourMain {
         networking.instruct();
 
         grid.print();
+        System.out.println("Here!");
         while (!won) {
+            System.out.println("NOW!");
             while(Listener.gotPacket) {
                 //Both!
                 System.out.println("Test!");
