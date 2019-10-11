@@ -22,7 +22,7 @@ public class Listener extends Thread {
         gotPacket = false;
 
         try {
-            serverSocket = new ServerSocket(80);
+            serverSocket = new ServerSocket(135);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -51,9 +51,7 @@ public class Listener extends Thread {
 
             try {
                 assert objectInputStream != null;
-                Object o = objectInputStream.readObject();
-                if (o instanceof Packet)
-                    this.packet = (Packet) objectInputStream.readObject();
+                this.packet = (Packet) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
