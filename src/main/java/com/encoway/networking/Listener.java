@@ -57,7 +57,6 @@ public class Listener extends Thread {
             }
 
             //packet weitergeben
-            System.out.println("Packet: " + packet.getPacketType());
             gotPacket = true;
         }
     }
