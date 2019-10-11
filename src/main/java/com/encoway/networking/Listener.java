@@ -51,7 +51,9 @@ public class Listener extends Thread {
 
             try {
                 assert objectInputStream != null;
-                this.packet = (Packet) objectInputStream.readObject();
+                Object o = objectInputStream.readObject();
+                if (o instanceof Packet)
+                    this.packet = (Packet) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
