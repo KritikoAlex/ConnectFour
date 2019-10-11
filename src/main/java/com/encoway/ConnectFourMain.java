@@ -36,13 +36,14 @@ public class ConnectFourMain {
                     Thread.sleep(250);
                     networking.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
                     grid.print();
+                    switchPlayer();
                 //Receipt Side
                 }else if(Listener.packet.getPacketType() == PacketType.PLACE_CHIP){
-                    switchPlayer();
                     Packet packet = Listener.packet;
                     int row = packet.getData();
                     grid.insertCoin(row, 0, currentPlayer);
                     grid.print();
+                    switchPlayer();
                 }
             }
         }

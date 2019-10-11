@@ -4,11 +4,8 @@
     <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/networking/Networking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/networking/Networking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570780534514</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="F V9">
+      <created>1570781079325</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1570781079325</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
