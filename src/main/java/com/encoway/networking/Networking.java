@@ -1,7 +1,10 @@
 package com.encoway.networking;
 
+import com.encoway.ConnectFourMain;
+
 import java.io.*;
 import java.net.*;
+import java.util.List;
 import java.util.Scanner;
 
 public class Networking {
@@ -42,6 +45,7 @@ public class Networking {
             Listener.gotPacket = false;
             this.send(Listener.lastOpponentIp, 80, new Packet(PacketType.ACCEPT_INVITATION, 0));
             System.out.println("connected");
+            ConnectFourMain.id = 1;
             Thread.sleep(250);
             this.send(Listener.lastOpponentIp, 80, new Packet(PacketType.TAKE_CONTROL, 0));
 
