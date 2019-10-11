@@ -53,11 +53,14 @@ public class ConnectFourMain {
                     grid.print();
                     switchPlayer();
                 } else if (Listener.packet.getPacketType() == PacketType.WIN) {
+                    switchPlayer();
+                    System.out.println("The player " + currentPlayer.getColor() + Listener.packet.getData() + Colors.ANSI_RESET + " has won!");
                     System.exit(0);
                 }
             }
         }
         System.out.println("The player " + currentPlayer.getColor() + id + Colors.ANSI_RESET + " has won!");
+        System.exit(0);
     }
 
     private static int insertCoinViaControl() {
