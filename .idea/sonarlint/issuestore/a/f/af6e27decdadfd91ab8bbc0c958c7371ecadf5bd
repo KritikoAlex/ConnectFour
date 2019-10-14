@@ -1,5 +1,12 @@
 
-´%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(àÒşüøÿÿÿÿ8Ñè†¨Û-
-Msquid:S1444"*Make this "public static grid" field final(Ù˜£ªøÿÿÿÿ8­˜í§Û-
-Š"squid:ClassVariableVisibilityCheck"PMake grid a static final constant or non-public and provide accessors if needed.(Ù˜£ªøÿÿÿÿ8­˜í§Û-
-©%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(àÒşüøÿÿÿÿ8Ñè†¨Û-
+Msquid:S1444"*Make this "public static grid" field final(Ù˜£ªøÿÿÿÿ8­˜í§Û-
+„"squid:ClassVariableVisibilityCheck"OMake won a static final constant or non-public and provide accessors if needed.(×²æÓ8Œù£ØÛ-
+ˆ"squid:ClassVariableVisibilityCheck"NMake id a static final constant or non-public and provide accessors if needed.(¨±Çôûÿÿÿÿ8Œù£ØÛ-
+"squid:ClassVariableVisibilityCheck"VMake networking a static final constant or non-public and provide accessors if needed.(ÊŠæäøÿÿÿÿ8Œù£ØÛ-
+Š"squid:ClassVariableVisibilityCheck"PMake grid a static final constant or non-public and provide accessors if needed.(Ù˜£ªøÿÿÿÿ8­˜í§Û-
+usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(àÒşüøÿÿÿÿ8Œù£ØÛ-
+Ksquid:S1444"(Make this "public static id" field final(¨±Çôûÿÿÿÿ8Œù£ØÛ-
+Ssquid:S1444"0Make this "public static networking" field final(ÊŠæäøÿÿÿÿ8Œù£ØÛ-
+Gsquid:S1444")Make this "public static won" field final(×²æÓ8Œù£ØÛ-
+Nsquid:S1444"0Make this "public static winnerCoin" field final(òÌ¿“8Œù£ØÛ-
+‹"squid:ClassVariableVisibilityCheck"VMake winnerCoin a static final constant or non-public and provide accessors if needed.(òÌ¿“8Œù£ØÛ-

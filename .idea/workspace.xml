@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66414fe0-1dc1-4802-ac74-55250fd0ed01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/2788a3f2341f9fe2225960f3b90c8890ae24f002" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/2788a3f2341f9fe2225960f3b90c8890ae24f002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/35480996956b64749d0d0ccbb71e4c8ab64bbc2c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/35480996956b64749d0d0ccbb71e4c8ab64bbc2c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af6e27decdadfd91ab8bbc0c958c7371ecadf5bd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af6e27decdadfd91ab8bbc0c958c7371ecadf5bd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/ConnectFourMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encoway/networking/Networking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ConnectFour-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/ConnectFourMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/networking/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/networking/Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/encoway/networking/Networking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/encoway/networking/Networking.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +23,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
   </component>
@@ -170,11 +169,28 @@
       <option name="project" value="LOCAL" />
       <updated>1570802682615</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="FFFFFFFFFFF">
+      <created>1570803568917</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570803568917</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -199,6 +215,7 @@
     <MESSAGE value="F V9" />
     <MESSAGE value="F V10" />
     <MESSAGE value="F port fix mega F" />
-    <option name="LAST_COMMIT_MESSAGE" value="F port fix mega F" />
+    <MESSAGE value="FFFFFFFFFFF" />
+    <option name="LAST_COMMIT_MESSAGE" value="FFFFFFFFFFF" />
   </component>
 </project>

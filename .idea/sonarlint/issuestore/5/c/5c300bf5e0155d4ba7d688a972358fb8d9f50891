@@ -1,0 +1,10 @@
+
+]squid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ÏÌ‚
+Asquid:S00108")Either remove or fill this block of code.(ÏÌ‚
+?squid:S1148;"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+[squid:S2095E"DUse try-with-resources or close this "Socket" in a "finally" clause.(ÙŞçø
+csquid:S20959"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ƒ¢
+Tsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+Ssquid:S2696%"6Make the enclosing method "static" or remove this set.(óÙœ:8´™¸ÙÛ-
+Ssquid:S2696-"6Make the enclosing method "static" or remove this set.(óÙœ:8´™¸ÙÛ-
+Tsquid:S26960"6Make the enclosing method "static" or remove this set.( î€8´™¸ÙÛ-

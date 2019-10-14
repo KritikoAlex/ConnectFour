@@ -1,2 +1,13 @@
 
-1squid:S1700	"Rename field "grid"(Ñ„ò¤8–©í§Û-
+1squid:S1700"Rename field "grid"(Ñ„ò¤8–©í§Û-
+Xsquid:S1191"5Use classes from the Java API instead of Sun classes.(ğ¥Œùÿÿÿÿ8ˆù£ØÛ-
+}squid:S1488…"^Immediately return this expression instead of assigning it to the temporary variable "result".(ùùò”8ˆù£ØÛ-
+Ysquid:S2696>"6Make the enclosing method "static" or remove this set.(¶‚Œúÿÿÿÿ8ˆù£ØÛ-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(‰¯8ˆù£ØÛ-
+usquid:S3776B"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(ÃÍªàşÿÿÿÿ8ˆù£ØÛ-
+dsquid:S2142E"FEither re-interrupt this method or rethrow the "InterruptedException".(ò¶È8ˆù£ØÛ-
+Msquid:S00108'")Either remove or fill this block of code.(¹±ùúşÿÿÿÿ8ˆù£ØÛ-
+Gsquid:S00108<")Either remove or fill this block of code.(Éò§+8ˆù£ØÛ-
+Hsquid:S00108E")Either remove or fill this block of code.(ò¶È8ˆù£ØÛ-
+isquid:UselessImportCheck">Remove this unused import 'com.encoway.networking.Networking'.(”£«ú8ˆù£ØÛ-
+[squid:UselessImportCheck"+Remove this unused import 'sun.nio.ch.Net'.(ğ¥Œùÿÿÿÿ8ˆù£ØÛ-

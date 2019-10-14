@@ -1,0 +1,21 @@
+
+Msquid:S26966"6Make the enclosing method "static" or remove this set.(äÞß¿
+Ksquid:S1444"/Make this "public static gotPacket" field final(ë¤Åêüÿÿÿÿ
+Ksquid:S1444"4Make this "public static lastOpponentIp" field final(éžá‘
+Csquid:S1444",Make this "public static packet" field final(äÞôÈ
+Lsquid:S22096"5Change this instance-reference to a static reference.(äÞß¿
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(ýàÈóÿÿÿÿÿ
+Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ô¶³ ÿÿÿÿÿ
+Rsquid:S2696&"6Make the enclosing method "static" or remove this set.(³Ù½ñúÿÿÿÿ
+asquid:S2095"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(Ò…Ôû
+€"squid:ClassVariableVisibilityCheck"RMake packet a static final constant or non-public and provide accessors if needed.(äÞôÈ
+?squid:S11481"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148#"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Rsquid:S2696<"6Make the enclosing method "static" or remove this set.(–Áæþÿÿÿÿ
+ˆ"squid:ClassVariableVisibilityCheck"ZMake lastOpponentIp a static final constant or non-public and provide accessors if needed.(éžá‘
+?squid:S1148+"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S11488"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+ˆ"squid:ClassVariableVisibilityCheck"UMake gotPacket a static final constant or non-public and provide accessors if needed.(ë¤Åêüÿÿÿÿ
+Qsquid:S2209&"5Change this instance-reference to a static reference.(³Ù½ñúÿÿÿÿ
+Qsquid:S1161":Add the "@Override" annotation above this method signature(“–ýþ

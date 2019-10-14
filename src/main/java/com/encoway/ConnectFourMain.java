@@ -18,7 +18,6 @@ public class ConnectFourMain {
     public static boolean won = false;
     private static Coin currentPlayer = Coin.YELLOW;
     public static int id = 0;
-    public static Coin winnerCoin;
     public static Networking networking;
 
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -36,7 +35,7 @@ public class ConnectFourMain {
                     int row = insertCoinViaControl();
                     if (!won) {
                         networking.send(Listener.lastOpponentIp, 8080, new Packet(PacketType.PLACE_CHIP, row));
-                        Thread.sleep(250);
+                        Thread.sleep(150);
                         networking.send(Listener.lastOpponentIp, 8080, new Packet(PacketType.TAKE_CONTROL, 0));
                         grid.print();
                         switchPlayer();
@@ -57,7 +56,7 @@ public class ConnectFourMain {
             }
         }
         System.out.println("The player " + currentPlayer.getColor() + id + Colors.ANSI_RESET + " has won!");
-        Thread.sleep(15000);
+        Thread.sleep(15);
         System.exit(0);
     }
 
